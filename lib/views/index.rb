@@ -9,31 +9,32 @@ require 'pry'
 class Index
 
   def perform
-#   binding.pry
-#   puts "end of file"
+
     puts "What do you want to do user ?"
-    puts "'Scrapper' ? 'Send' an email ?"
+    puts "save email and Townhall array of hash  as'JSON' or as 'Google' spreadsheet or as 'csv' ?"
     answer = gets.chomp.to_s
     
-    if answer == "Scrapper" 
+    if answer == "JSON" 
+      
+      puts "you chose to save as JSON. Processing..."
+      Scrapper.new.save_as_JSON
     
-        Scrapper.new.perform
-    
-    elsif answer == "Send"
-    
-        EmailSender.new.perform
+    elsif answer == "Google"
+
+      puts "you chose to save as Google spreadsheet. Processing..."
+      Scrapper.new.save_as_spreadsheet
+
+    elsif answer == "csv"
+
+      puts "you chose to save as csv. Processing..."
+      Scrapper.new.save_as_csv
     
     else 
     
-        puts "I don't understand what do you mean. Do you want perform 'Scrapper' ? or 'Send' email ?"
+      puts "I don't understand what do you mean. You need to write JSON or Google or csv."
     
     end
+  
   end      
- # Done.new.perform
- 
 
-end
-
-Index.new.perform
-
-
+end #fin de ma classe
