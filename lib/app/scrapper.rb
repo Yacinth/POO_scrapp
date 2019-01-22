@@ -67,7 +67,7 @@ class Scrapper
   
   #methode qui crée un fichier array_email.json dans le dossier db et y insere le big_array
   def save_as_JSON
-      File.open("db/array_email.json","w") do |f|
+      File.open("db/emails.json","w") do |f|
       f.write(JSON.pretty_generate(big_array))
       end
   end
