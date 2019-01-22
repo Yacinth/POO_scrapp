@@ -119,7 +119,7 @@ class Scrapper
     i = 1
     towns = get_townhall_urls
     #création du fichier email.csv
-		CSV.open("db/email.csv", "wb") do |f|
+		CSV.open("db/emails.csv", "wb") do |f|
       #pour chaque url de mairie, on entre l'array [i, key[0] (la mairie), valeur[0](email correspondant) ]
       towns.each do |town|
 
