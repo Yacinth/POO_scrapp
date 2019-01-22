@@ -74,7 +74,7 @@ class Scrapper
   def save_as_spreadsheet
 
   session = GoogleDrive::Session.from_config("config.json")
-  ws = session.spreadsheet_by_key("1LNBcTsB_eCk2cZ-tMKVLaG9weHiPC7cuizilrt1c3fk/edit#gid=0").worksheets[0]
+  ws = session.spreadsheet_by_key("1LNBcTsB_eCk2cZ-tMKVLaG9weHiPC7cuizilrt1c3fk").worksheets[0]
   
   # Gets content of A2 cell.
   p ws[2, 1]  #==> "hoge"
@@ -114,5 +114,5 @@ class Scrapper
 
 end #fin de ma classe
 
-Scrapper.new.save_as_spreadsheet
+#Scrapper.new.save_as_spreadsheet
 end
