@@ -8,4 +8,6 @@ require 'app/scrapper.rb'
 #Index.new.perform
 
 #perform la methode write_json de la class Scrapper
-Scrapper.new.write_json
+#Scrapper.new.save_as_JSON
+
+Scrapper.new.save_as_spreadsheet
