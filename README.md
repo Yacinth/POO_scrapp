@@ -4,7 +4,9 @@
 ## "Scrapper, stop to scrap !"
 
 Pour faire fonctionner le programme Ruby tape dans ta console :
+```ruby
 $ ruby app.rb
+```
 
 App.rb permet de lancer un programme ruby qui scrappe les emails du site des mairies du 9-5 et propose à l'user de les stocker dans 3 formats differents : Json, Google Spreadsheet, CSV.
 
